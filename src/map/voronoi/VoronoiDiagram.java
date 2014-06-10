@@ -1,6 +1,9 @@
-package map;
+package map.voronoi;
 
 import java.util.Random;
+
+import map.HeightMap;
+import map.MapGenerator;
 
 public class VoronoiDiagram implements MapGenerator {
 
@@ -26,7 +29,7 @@ public class VoronoiDiagram implements MapGenerator {
         this.numPoints = numPoints;
     }
 
-    private VoronoiPoint randomPoint(Random random, int width, int height) {
+    protected VoronoiPoint randomPoint(Random random, int width, int height) {
         int row = random.nextInt(height);
         int col = random.nextInt(width);
         //float val = (float)(SimplexNoise.noise((float)col/30, (float)row/30) / 2 + 0.5);
@@ -34,7 +37,7 @@ public class VoronoiDiagram implements MapGenerator {
         return new VoronoiPoint(row, col, val);
     }
 
-    private VoronoiPoint closestVoronoi(int row, int col, VoronoiPoint[] points) {
+    protected VoronoiPoint closestVoronoi(int row, int col, VoronoiPoint[] points) {
         VoronoiPoint close = null;
         double dist = Double.MAX_VALUE;
         for (VoronoiPoint p : points) {
@@ -50,17 +53,5 @@ public class VoronoiDiagram implements MapGenerator {
         return close;
     }
 
-    private class VoronoiPoint {
-        int col;
-        int row;
-        float value;
-
-        VoronoiPoint(int row, int col, float value) {
-            this.col = col;
-            this.row = row;
-            this.value = value;
-        }
-    }
-
-    private int numPoints;
+    protected int numPoints;
 }

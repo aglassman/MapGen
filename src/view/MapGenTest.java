@@ -12,7 +12,7 @@ import javax.swing.JFrame;
 
 import map.HeightMap;
 import map.MapGenerator;
-import map.VoronoiDiagram;
+import map.voronoi.VoronoiContinent;
 
 public class MapGenTest {
     public static void main(String... args) {
@@ -20,7 +20,7 @@ public class MapGenTest {
     }
     
     public MapGenTest() {
-        generator = new VoronoiDiagram(100);
+        generator = new VoronoiContinent(100);
 
         float seaLevel = 0.4f;
         float grassLevel = 0.8f;
