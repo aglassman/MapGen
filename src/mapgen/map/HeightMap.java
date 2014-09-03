@@ -1,4 +1,4 @@
-package map;
+package mapgen.map;
 
 public class HeightMap {
     public final int WIDTH;

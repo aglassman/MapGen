@@ -1,9 +1,9 @@
-package map.voronoi;
+package mapgen.map.voronoi;
 
 import java.util.Random;
 
-import map.HeightMap;
-import map.MapGenerator;
+import mapgen.map.HeightMap;
+import mapgen.map.MapGenerator;
 
 public class VoronoiDiagram implements MapGenerator {
 

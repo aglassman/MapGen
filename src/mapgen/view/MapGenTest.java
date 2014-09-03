@@ -1,4 +1,4 @@
-package view;
+package mapgen.view;
 
 import java.awt.Color;
 import java.awt.Dimension;
@@ -10,9 +10,9 @@ import java.util.Random;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 
-import map.HeightMap;
-import map.MapGenerator;
-import map.voronoi.VoronoiContinent;
+import mapgen.map.HeightMap;
+import mapgen.map.MapGenerator;
+import mapgen.map.voronoi.VoronoiContinent;
 
 public class MapGenTest {
     public static void main(String... args) {

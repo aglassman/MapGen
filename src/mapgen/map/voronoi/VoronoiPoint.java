@@ -1,4 +1,4 @@
-package map.voronoi;
+package mapgen.map.voronoi;
 
 public class VoronoiPoint {
     int col;

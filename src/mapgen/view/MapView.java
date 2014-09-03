@@ -1,6 +1,6 @@
-package view;
+package mapgen.view;
 
-import map.HeightMap;
+import mapgen.map.HeightMap;
 
 import javax.swing.*;
 import java.awt.*;
